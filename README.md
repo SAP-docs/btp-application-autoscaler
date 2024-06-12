@@ -1,8 +1,8 @@
-[![REUSE status](https://api.reuse.software/badge/github.com/SAP-docs/YOUR-REPO-NAME)](https://api.reuse.software/info/github.com/SAP-docs/YOUR-REPO-NAME)
+[![REUSE status](https://api.reuse.software/badge/github.com/SAP-docs/btp-application-autoscaler)](https://api.reuse.software/info/github.com/SAP-docs/btp-application-autoscaler)
 
-# Contributions to YOUR-DOCUMENTATION
+# Contributions to Application Autoscaler
 
-Found a mistake in our documentation? Always wanted to add a step in one of our procedures that could save many others much time? Then you're at the right place! All contributions made to the Markdown files in the [docs](docs) directory are reviewed, and if deemed valuable be added to our [official documentation on SAP Help Portal](YOUR-LINK). The easiest way is to start there, and choose _Edit_ to find the right Markdown file to contribute to.
+Found a mistake in our documentation? Always wanted to add a step in one of our procedures that could save many others much time? Then you're at the right place! All contributions made to the Markdown files in the [docs](docs) directory are reviewed, and if deemed valuable be added to our [official documentation on SAP Help Portal](https://help.sap.com/docs/application-autoscaler/application-autoscaler/what-is-application-autoscaler?version=Cloud). The easiest way is to start there, and choose _Edit_ to find the right Markdown file to contribute to.
 
 ## Requirements
 
@@ -11,9 +11,9 @@ For contributions, it's required that you have a GitHub account. For more inform
 
 ## Contributing
 
-We recommend using the YOUR-DOCUMENTATION documentation on SAP Help Portal as a starting point for contributions:
+We recommend using the Application Autoscaler documentation on SAP Help Portal as a starting point for contributions:
 
-1. Open the [YOUR-DOCUMENTATION Documentation](YOUR-LINK).
+1. Open the [Application Autoscaler documentation](https://help.sap.com/docs/application-autoscaler/application-autoscaler/what-is-application-autoscaler?version=Cloud).
 1. You can either:
     * Choose *Feedback* > *Edit page* to suggest a change for the current page you see in the Help Portal viewer, or
     * Choose *Feedback* > *Create issue* to open a GitHub issue in this repository.
