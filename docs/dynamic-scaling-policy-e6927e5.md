@@ -1,7 +1,7 @@
 <!-- loioe6927e5af85e45f4a8a056c8662fa784 -->
 
 # Dynamic Scaling Policy
-
+ 
 Scale your application instances based on memory or CPU usage, response time, throughput, or custom metrics.
 
 > ### Note:  
