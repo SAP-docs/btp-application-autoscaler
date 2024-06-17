@@ -11,7 +11,7 @@ Scale your application instances based on memory or CPU usage, response time, th
 
 <a name="loioe6927e5af85e45f4a8a056c8662fa784__section_dtl_yfb_n4b"/>
 
-## Metric Types **memory consumed** and **memory utilized**
+## Metric Types: **memory consumed** and **memory utilized**
 
 These scaling rules define that if the memory consumption either exceeds or falls below the set threshold, the application is respectively scaled up or down by an instance. If an array of scaling rules is defined, the Application Autoscaler runs periodic checks of the scaling policy to verify if any of the specified conditions matches. New instances are generated based on specified rules.
 
@@ -105,7 +105,7 @@ Metric Type **memory utilized**
 
 
 
-## Metric Types **throughput** and **responsetime**
+## Metric Types: **throughput** and **responsetime**
 
 The following samples are simple scaling policies for the metric types **throughput** and **responsetime**. The scaling rule determines if the throughput or response time exceeds or falls below the set threshold.
 
