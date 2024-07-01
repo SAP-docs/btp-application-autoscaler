@@ -6,6 +6,24 @@ Automatically scale your applications to meet their dynamic resource needs.
 
 Application Autoscaler lets you automatically increase or decrease the number of your application instances based on the policies you have defined.
 
+> ### Tip:  
+> The English version of this guide is open for contributions and feedback using GitHub. This allows you to get in contact with responsible authors of SAP Help Portal pages and the development team to discuss documentation-related issues. To contribute to this guide, or to provide feedback, choose the corresponding option on SAP Help Portal:
+> 
+> -   *Feedback* \> *Create issue*: Provide feedback about a documentation page. This option opens an issue on GitHub.
+> 
+> -   *Feedback* \> *Edit page*: Contribute to a documentation page. This option opens a pull request on GitHub.
+> 
+> 
+> You need a GitHub account to use these options.
+> 
+> More information:
+> 
+> -   [Contribution Guidelines](https://help.sap.com/docs/open-documentation-initiative/contribution-guidelines/readme.html)
+> 
+> -   [Introduction Video](https://www.youtube.com/watch?v=WJ0oarMlVW4)
+> 
+> -   [Introduction Blog Post](https://blogs.sap.com/2021/11/29/sap-btp-documentation-goes-github-new-collaboration-process/)
+
 
 
 ## Features
