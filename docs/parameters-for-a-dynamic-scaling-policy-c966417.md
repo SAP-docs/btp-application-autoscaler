@@ -45,43 +45,7 @@ Example
 
 </th>
 </tr>
-<tr>
-<td valign="top">
 
-`instance_min_count` 
-
-</td>
-<td valign="top">
-
-The minimum number of application instances that are always running.
-
-</td>
-<td valign="top">
-
-Yes
-
-</td>
-<td valign="top">
-
-number
-
-</td>
-<td valign="top">
-
-minimum = 1; maximum = no upper limit
-
-</td>
-<td valign="top">
-
-none
-
-</td>
-<td valign="top">
-
-`1` 
-
-</td>
-</tr>
 <tr>
 <td valign="top">
 
