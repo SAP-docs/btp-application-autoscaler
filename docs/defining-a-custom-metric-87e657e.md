@@ -12,7 +12,7 @@ Define your own metrics to scale applications based on your requirements.
 
 As an alternative to the standard metrics provided by the Application Autoscaler, you can also define custom metrics such as memory consumed in megabytes or in percentage, response time, and throughput for scaling. Custom metrics offer more flexibility, so that you can scale applications based on your own requirements.
 
-To use custom metrics, your application need to perform the following tasks:
+To use custom metrics, your application needs to perform the following tasks:
 
 1.  Report a custom metric to the Application Autoscaler by defining a policy.
 
