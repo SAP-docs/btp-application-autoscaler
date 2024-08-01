@@ -87,7 +87,7 @@ As part of the binding process, the Application Autoscaler service instance prov
 3.  **Authenticate with X.509 Certificate**: Your application requires base url, certificate and a private key for mutual TLS authentication \(mTLS\).
 
     - use the base URL provided in the `mtls_url` of the service binding
-    - use the X.509 certificate and private key from the paths in `CF_INSTANCE_CERT` and `CF_INSTANCE_KEY` respectively.
+    - use the X.509 certificate and private key from the paths provided in the environment variables `CF_INSTANCE_CERT` and `CF_INSTANCE_KEY` respectively.
 
     >       ### Note:
     >       The X.509 certificate and private key pair are valid for 24 hours. At least 20 minutes before expiration, they are regenerated and new files replace the existing files. Make sure that your code reloads the X.509 certificate and private key pair if they are expired. See [Using Instance Identity Credentials](https://docs.cloudfoundry.org/devguide/deploy-apps/instance-identity.html) in the Cloud Foundry Documentation.
