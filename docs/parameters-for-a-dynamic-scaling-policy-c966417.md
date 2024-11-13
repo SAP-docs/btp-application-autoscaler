@@ -170,7 +170,7 @@ The metric type can be one of the following options:
 
 -   memory utilization as a percentage of the memory quota \(`memoryutil`\)
 
--   CPU as a percentage of virtual CPUs used \(`cpu`\) \(We recommend to instead use the CPU entitlement utilization metric \(`cpuutil`\), which eliminates the need to calculate the CPU entitlement for your application.\)  
+-   CPU as a percentage of virtual CPUs used \(`cpu`\) \(Instead, we recommend to use the CPU entitlement utilization metric \(`cpuutil`\), which eliminates the need to calculate the CPU entitlement for your application.\)  
 
 -   CPU entitlement utilization as percentage \(`cpuutil`\)
 -   disk usage in mebibytes \(`disk`\)
