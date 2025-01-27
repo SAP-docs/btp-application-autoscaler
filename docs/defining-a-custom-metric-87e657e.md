@@ -38,15 +38,15 @@ The following example shows a policy with a custom metric:
 }
 ```
 
-> ### Note:  
+> ### Note:
 > The metric type used for custom metrics must not be any of the standard metric types.
 
-> ### Tip:  
+> ### Tip:
 > We recommend a minimum duration of one minute between successive emissions of a custom metric.
-> 
+>
 > As part of the binding process, the Application Autoscaler service instance provides necessary credentials to emit custom metrics.
 
-The generation of these credentials is based on the credential type parameter in the service binding. The supported credential types are binding-secret and x509. If no credential type is provided, binding-secret is used as the default credential type.
+The generation of these credentials is based on the credential type parameter in the service binding. The supported credential types are binding-secret and x509. If no credential type is provided, x509 is used as the default credential type.
 
 
 
@@ -56,9 +56,9 @@ The generation of these credentials is based on the credential type parameter in
 
     **sample policy.json with credential Type as x509**
 
-    > ### Sample Code:  
+    > ### Sample Code:
     > ```
-    > 
+    >
     > {
     >     "instance_min_count":1,
     >     "instance_max_count":4,
@@ -78,7 +78,7 @@ The generation of these credentials is based on the credential type parameter in
 
     **bind the service instance with the scaling policy**
 
-    > ### Sample Code:  
+    > ### Sample Code:
     > ```
     > cf bind-service <application> <application-autoscaler-service-instance> -c policy.json
     > ```
@@ -87,16 +87,16 @@ The generation of these credentials is based on the credential type parameter in
 
     **Binding Credentials for mTLS**
 
-    > ### Sample Code:  
+    > ### Sample Code:
     > ```
-    > 
+    >
     > "custom_metrics": {
     >       "mtls_url": "https://autoscaler-metrics-mtls.cf.<landscape>.hana.ondemand.com",
     >      }
-    > 
+    >
     > ```
 
-3.  
+3.
 
     **Authenticate with X.509 Certificate:**
 
@@ -107,16 +107,14 @@ The generation of these credentials is based on the credential type parameter in
     -   Use the X.509 certificate and private key from the paths provided in the environment variables `CF_INSTANCE_CERT` and `CF_INSTANCE_KEY` respectively.
 
 
-    > ### Note:  
+    > ### Note:
     > The environment variables `CF_INSTANCE_CERT` and `CF_INSTANCE_KEY` are not shown in the cockpit or using the `cf env` command. They are only visible inside the running application container.
 
     **Authenticate with Basic Authentication \(Deprecated, do not use\):**
 
-    > ### Note:  
+    > ### Note:
     > The X.509 certificate and private key pair are valid for 24 hours. At least 20 minutes before expiration, they are regenerated and new files replace the existing files. Make sure that your code reloads the X.509 certificate and private key pair if they are expired. See [Using Instance Identity Credentials](https://docs.cloudfoundry.org/devguide/deploy-apps/instance-identity.html) in the Cloud Foundry Documentation.
 
-    `url`, `username`, and `password` in the application environment are provided for backwards compatibility with the HTTP basic authentication scheme and should not be used going forward. If your application still needs to authenticate with basic authentication, use credential-type binding-secret in the service binding and plan to migrate to mTLS \(\`x509\`\) authentication until 2025-01-23.
+    `url`, `username`, and `password` in the application environment are provided for backwards compatibility with the HTTP basic authentication scheme and should not be used going forward. If your application still needs to authenticate with basic authentication, use credential-type binding-secret in the service binding and plan to migrate to mTLS \(\`x509\`\) authentication until 2025-04-30.
 
 4.  Push custom metrics at an interval of your choice using APIs. For the REST API specification, see [Application Autoscaler custom metrics API](https://api.sap.com/api/ApplicationAutoscalerCustomMetricsAPI/resource).
-
-
