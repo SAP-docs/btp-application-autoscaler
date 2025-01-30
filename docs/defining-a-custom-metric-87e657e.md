@@ -52,7 +52,7 @@ The following example shows a policy with a custom metric:
 
 The following scenario involves two different applications that are bound to the same Autoscaler service, for example, the metric producer app and an app that should be scaled. Here, the metric producer app sends custom metrics on behalf of the app to be scaled.
 
-> ### Note:
+> ### Caution:
 > This scenario is not supported with the deprecated “Basic Authentication”.
 
 ![This scenario involves two different applications that are bound to the same Autoscaler service, for example, the metric producer app and an app that should be scaled. The metric producer app sends custom metrics on behalf of the app to be scaled.](images/CustomMetrics2apps_3952152.png)
