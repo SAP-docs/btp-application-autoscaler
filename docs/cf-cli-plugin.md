@@ -1,24 +1,27 @@
 # Plug-in for the “Cloud Foundry CLI”
-“Application Autoscaler” offers a plug-in for the “Cloud Foundry CLI”. With it users can attach or detach scaling-policies to their apps. They can view them and view the scaling-history. And they can view the metrics send by their apps.
+“Application Autoscaler” provides a plug-in for the “Cloud Foundry CLI”. It can be used to:
+  * attach or detach scaling-policies to apps
+  * view attached scaling-policies and view the scaling-histories
+  * view the metrics send by an app
 
-This is useful to get some insights on how currently applied scaling-policies work and if changes are reasonable. It is as well useful for debugging. A common case is, when [custom-metrics](<../defining-a-custom-metric-87e657e.md>) are introduced to scale an app and the developers want to check, if the send metrics are correctly processed by Autoscaler and why up-/down-scaling happens or does not happen.
+This is useful to get some insights on how currently applied scaling-policies work and if changes are reasonable. It is as well useful for debugging. A common case is, when [custom-metrics](<../defining-a-custom-metric-87e657e.md>) are introduced to scale an app and the developers want to check, if the send metrics are correctly processed by Application Autoscaler and why scaling out or in does happen or not.
 
 ## Command List
-| Command                                                          | Description                                    |
-|------------------------------------------------------------------|------------------------------------------------|
-| [autoscaling-api, asa](#cf-autoscaling-api)                      | Set or view AutoScaler service API endpoint    |
-| [autoscaling-policy, asp](#cf-autoscaling-policy)                | Retrieve the scaling policy of an application  |
-| [attach-autoscaling-policy, aasp](#cf-attach-autoscaling-policy) | Attach a scaling policy to an application      |
-| [detach-autoscaling-policy, dasp](#cf-detach-autoscaling-policy) | Detach the scaling policy from an application  |
-| [autoscaling-metrics, asm](#cf-autoscaling-metrics)              | Retrieve the metrics of an application         |
-| [autoscaling-history, ash](#cf-autoscaling-history)              | Retrieve the scaling history of an application |
+| Command                                                          | Description                                             |
+|------------------------------------------------------------------|---------------------------------------------------------|
+| [autoscaling-api, asa](#cf-autoscaling-api)                      | Set or view Application Autoscaler service API endpoint |
+| [autoscaling-policy, asp](#cf-autoscaling-policy)                | Retrieve the scaling policy of an application           |
+| [attach-autoscaling-policy, aasp](#cf-attach-autoscaling-policy) | Attach a scaling policy to an application               |
+| [detach-autoscaling-policy, dasp](#cf-detach-autoscaling-policy) | Detach the scaling policy from an application           |
+| [autoscaling-metrics, asm](#cf-autoscaling-metrics)              | Retrieve the metrics of an application                  |
+| [autoscaling-history, ash](#cf-autoscaling-history)              | Retrieve the scaling history of an application          |
 
 ## Command usage
 ### `cf autoscaling-api`
 Set or view the API-endpoint of the service Autoscaler to be used by this CLI. If the CF API endpoint is <https://api.example.com>, then typically the Autoscaler-API-endpoint will be https://autoscaler.example.com. Check the manifest when Autoscaler is deployed to get the API-endpoint.
 
 > ### Note:
-> This command is usually not needed when working with BTP-Cloud-Foundry.
+> This command is usually not needed when working with SAP BTP, Cloud Foundry environment.
 
 ```shell
 cf autoscaling-api [URL] [--unset] [--skip-ssl-validation]
@@ -173,7 +176,7 @@ memoryused          62MB        2018-12-27T11:51:40+08:00
 - `Value`: the value of the current metric item with unit
 - `Timestamp`: collect time of the current metric item
 
-###  `cf autoscaling-history`
+### `cf autoscaling-history`
 Retrieve the scaling event history of an application. You can specify the start/end time of the returned query result,  and the display order(ascending or descending). The scaling event history will be shown in a table.
 ```shell
 cf autoscaling-history APP_NAME [--start START_TIME] [--end END_TIME] [--asc] [--output PATH_TO_FILE]

@@ -1,8 +1,7 @@
 <!-- loiof3e7fa907e9d4da89fc55602818bd6f4 -->
 
 # Initial Setup
-
-Create an instance of the Application Autoscaler service and bind it to your application. Install Autoscaler's plug-in for the “Cloud Foundry CLI” and attach a policy to your application.
+Create an instance of the Application Autoscaler service and bind it to your application. Install Autoscaler's plug-in for the “Cloud Foundry CLI” and attach a policy to your application.
 
 
 
@@ -22,7 +21,7 @@ Create an instance of the Application Autoscaler service and bind it to your app
 
 ## Procedure
 ### Bind your application
-1.  Check if the Application Autoscaler service is listed in the Service Marketplace using the following command:
+1.  Check if the Application Autoscaler service is listed in the Service Marketplace using the following command:
 
     ```shell
     cf marketplace
@@ -39,7 +38,7 @@ Create an instance of the Application Autoscaler service and bind it to your app
     > cf create-service autoscaler standard myservice
     > ```
 
-3.  Bind the service instance to your application using the following command. You can bind as many applications as you want to an Application Autoscaler service instance.
+3.  Bind the service instance to your application using the following command. You can bind as many applications as you want to an Application Autoscaler service instance.
 
     ```shell
     cf bind-service <application name> <instance name> -c <file name>.json
@@ -65,34 +64,3 @@ cf install-plugin -r CF-Community app-autoscaler-plugin
 ```
 
 For further installation-options, please look into the [documentation](<https://github.com/cloudfoundry/app-autoscaler-cli-plugin#install-plugin>) on its official repository on GitHub.
-
-### Attach a policy
- 1. Create a file named “app-policy.json” with the following content:
-    ```json
-    {
-      "instance_min_count": 1,
-      "instance_max_count": 2,
-      "scaling_rules": [
-        {
-          "metric_type": "cpuutil",
-          "breach_duration_secs": 120,
-          "threshold": 70,
-          "operator": ">=",
-          "cool_down_secs": 120,
-          "adjustment": "+1"
-        },
-        {
-          "metric_type": "cpuutil",
-          "breach_duration_secs": 120,
-          "threshold": 25,
-          "operator": "<",
-          "cool_down_secs": 120,
-          "adjustment": "-1"
-        }
-      ]
-    }
-    ```
- 2. Attach the policy:
-    ```shell
-    cf attach-autoscaling-policy <application name> 'app-policy.json'
-    ```
