@@ -9,7 +9,6 @@ This is useful to get some insights on how currently applied scaling-policies wo
 ## Command List
 | Command                                                          | Description                                             |
 |------------------------------------------------------------------|---------------------------------------------------------|
-| [autoscaling-api, asa](#cf-autoscaling-api)                      | Set or view Application Autoscaler service API endpoint |
 | [autoscaling-policy, asp](#cf-autoscaling-policy)                | Retrieve the scaling policy of an application           |
 | [attach-autoscaling-policy, aasp](#cf-attach-autoscaling-policy) | Attach a scaling policy to an application               |
 | [detach-autoscaling-policy, dasp](#cf-detach-autoscaling-policy) | Detach the scaling policy from an application           |
@@ -17,49 +16,6 @@ This is useful to get some insights on how currently applied scaling-policies wo
 | [autoscaling-history, ash](#cf-autoscaling-history)              | Retrieve the scaling history of an application          |
 
 ## Command usage
-### `cf autoscaling-api`
-Set or view the API-endpoint of the service Autoscaler to be used by this CLI. If the CF API endpoint is <https://api.example.com>, then typically the Autoscaler-API-endpoint will be https://autoscaler.example.com. Check the manifest when Autoscaler is deployed to get the API-endpoint.
-
-> ### Note:
-> This command is usually not needed when working with SAP BTP, Cloud Foundry environment.
-
-```shell
-cf autoscaling-api [URL] [--unset] [--skip-ssl-validation]
-```
-
-> #### Alias:
-> asa
-
-#### Options:
-- `--unset`: Unset the api endpoint
-- `--skip-ssl-validation` : Skip verification of the API endpoint. Not recommended!
-
-#### Examples:
-- Set Autoscaler-API-endpoint, replace `DOMAIN` with the domain of your Cloud Foundry environment:
-  ```shell
-  $ cf autoscaling-api https://autoscaler.<DOMAIN>
-  Setting AutoScaler api endpoint to https://autoscaler.<DOMAIN>
-  OK
-  ```
-- View Autoscaler-API-endpoint:
-  ```shell
-  $ cf autoscaling-api
-  Autoscaler api endpoint: https://autoscaler.<DOMAIN>
-```
-- Unset Autoscaler-API-endpoint: Note you will get a error prompt if the Autoscaler-API-endpoint is not set when you execute other commands.
-  ```shell
-  $ cf autoscaling-api --unset
-  Unsetting AutoScaler api endpoint.
-  OK
-
-  $ cf autoscaling-api
-  No api endpoint set. Use 'cf autoscaling-api' to set an endpoint.
-
-  $ cf autoscaling-policy APP_NAME
-  FAILED
-  Error: No api endpoint set. Use 'cf autoscaling-api' to set an endpoint.
-  ```
-
 ### `cf autoscaling-policy`
 Retrieve the scaling policy of an application, the policy will be displayed in JSON format.
 ```shell
