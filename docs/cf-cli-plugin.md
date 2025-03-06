@@ -6,6 +6,8 @@
 
 This is useful to get some insights on how currently applied scaling-policies work and if changes are reasonable. It is as well useful for debugging. A common case is, when [custom-metrics](<../defining-a-custom-metric-87e657e.md>) are introduced to scale an app and the developers want to check, if the send metrics are correctly processed by Application Autoscaler and why scaling out or in does happen or not.
 
+This documentation covers what is essential when using the plug-in on Cloud Foundry in BTP. For more details that are irrelevant to BTP, see: <https://github.com/cloudfoundry/app-autoscaler-cli-plugin/blob/main/README.md>
+
 ## Command List
 | Command                                                          | Description                                             |
 |------------------------------------------------------------------|---------------------------------------------------------|
