@@ -1,12 +1,13 @@
-# Plug-in for the “Cloud Foundry CLI”
-“Application Autoscaler” provides a plug-in for the “Cloud Foundry CLI”. It can be used to:
-  * attach or detach scaling-policies to apps
-  * view attached scaling-policies and view the scaling-histories
-  * view the metrics send by an app
+# Application Autoscaler Plugin for the Cloud Foundry CLI
+The Application Autoscaler offers a plugin for the Cloud Foundry Command Line Interface CLI. The plugin enables users to:
+  * attach or detach scaling policies to apps
+  * view attached scaling policies and view the scaling histories
+  * view the metrics sent by the app
 
-This is useful to get some insights on how currently applied scaling-policies work and if changes are reasonable. It is as well useful for debugging. A common case is, when [custom-metrics](<../defining-a-custom-metric-87e657e.md>) are introduced to scale an app and the developers want to check, if the send metrics are correctly processed by Application Autoscaler and why scaling out or in does happen or not.
+This is useful:
+  * to get some insights into how current scaling policies work and if changes are reasonable. It is as      * for debugging, especially when introducing [custom-metrics](<../defining-a-custom-metric-87e657e.md>) to scale an app. It lets you check if the sent metrics are correctly handled by the Application Autoscaler, and it helps you understand why your app is scaling out or in or why this does not happen.
 
-This documentation covers what is essential when using the plug-in on Cloud Foundry in BTP. For more details that are irrelevant to BTP, see: <https://github.com/cloudfoundry/app-autoscaler-cli-plugin/blob/main/README.md>
+This documentation explains how to use the plugin on Cloud Foundry in BTP. For details not related to BTP, see: <https://github.com/cloudfoundry/app-autoscaler-cli-plugin/blob/main/README.md>.
 
 ## Command List
 | Command                                                          | Description                                             |
@@ -69,7 +70,7 @@ cf autoscaling-policy APP_NAME [--output PATH_TO_FILE]
   ```
 
 ### `cf attach-autoscaling-policy`
-Attach a scaling policy to an application, the policy file must be a JSON file, refer to [policy specification](<./defining-a-scaling-policy-79f443a.md>) for the policy format.
+Attach a scaling policy to an application. The policy file must be a JSON file. See [policy specification](<./defining-a-scaling-policy-79f443a.md>) for the policy format.
 
 ```shell
 cf attach-autoscaling-policy APP_NAME PATH_TO_POLICY_FILE
@@ -87,7 +88,7 @@ OK
 ```
 
 ### `cf detach-autoscaling-policy`
-Detach the scaling policy from an application, the policy will be **deleted** when detached.
+Detach the scaling policy from an application. The policy will be **deleted** when detached.
 ```shell
 cf detach-autoscaling-policy APP_NAME
 ```
@@ -103,7 +104,7 @@ OK
 ```
 
 ### `cf autoscaling-metrics`
-Retrieve the aggregated metrics of an application. You can specify the start/end time of the returned query result,  and the display order(ascending or descending). The metrics will be shown in a table.
+Retrieve the aggregated metrics of an application. You can specify the start/end time of the returned query result and the display order (ascending or descending). The metrics are shown in a table.
 ```shell
 cf autoscaling-metrics APP_NAME METRIC_NAME [--start START_TIME] [--end END_TIME] [--asc] [--output PATH_TO_FILE]
 ```
@@ -135,7 +136,7 @@ memoryused          62MB        2018-12-27T11:51:40+08:00
 - `Timestamp`: collect time of the current metric item
 
 ### `cf autoscaling-history`
-Retrieve the scaling event history of an application. You can specify the start/end time of the returned query result,  and the display order(ascending or descending). The scaling event history will be shown in a table.
+Retrieve the scaling event history of an application. You can specify the start/end time of the returned query result, and the display order (ascending or descending). The scaling event history is shown in a table.
 ```shell
 cf autoscaling-history APP_NAME [--start START_TIME] [--end END_TIME] [--asc] [--output PATH_TO_FILE]
 ```
