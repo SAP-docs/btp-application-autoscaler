@@ -5,9 +5,10 @@ The Application Autoscaler offers a plugin for the Cloud Foundry Command Line I
   * view the metrics sent by the app
 
 This is useful:
-  * to get some insights into how current scaling policies work and if changes are reasonable. It is as      * for debugging, especially when introducing [custom-metrics](<../defining-a-custom-metric-87e657e.md>) to scale an app. It lets you check if the sent metrics are correctly handled by the Application Autoscaler, and it helps you understand why your app is scaling out or in or why this does not happen.
+  * to get some insights into how current scaling policies work and if changes are reasonable. 
+  * for debugging, especially when introducing [custom-metrics](<../defining-a-custom-metric-87e657e.md>) to scale an app. It lets you check if the sent metrics are correctly handled by the Application Autoscaler, and it helps you understand why your app is scaling out or in or why this does not happen.
 
-This documentation explains how to use the plugin on Cloud Foundry in BTP. For details not related to BTP, see: <https://github.com/cloudfoundry/app-autoscaler-cli-plugin/blob/main/README.md>.
+This documentation explains how to use the plugin on Cloud Foundry in BTP. For details not related to BTP, see <https://github.com/cloudfoundry/app-autoscaler-cli-plugin/blob/main/README.md>.
 
 ## Command List
 | Command                                                          | Description                                             |
