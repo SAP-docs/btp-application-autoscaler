@@ -70,7 +70,7 @@ The scaling app should set `metric_submission_strategy.allow-from` to `bound_app
 
 As part of the binding process, the Application Autoscaler service instance provides necessary credentials to emit custom metrics.
 
-The generation of these credentials is based on the credential type parameter in the service binding. The supported credential types are binding-secret and x509. If no credential type is provided, binding-secret is used as the default credential type.
+The generation of these credentials is based on the credential type parameter in the service binding. The supported credential types are binding-secret and x509. If no credential type is provided, x509 is used as the default credential type.
 
 
 

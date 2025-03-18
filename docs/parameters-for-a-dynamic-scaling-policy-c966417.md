@@ -318,7 +318,7 @@ integer
 -   `memoryused`: minimum = 1; maximum = no upper limit
 
 -   `memoryutil`: minumum = 1; maximum = 100
--   `cpu`: minimum = 1; maximum = 200
+-   `cpu`: minimum = 1; maximum = 400
 
 -   `cpuutil`: minimum = 1; maximum = 100
 
