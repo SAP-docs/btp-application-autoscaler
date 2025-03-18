@@ -1,7 +1,7 @@
 <!-- loiof3e7fa907e9d4da89fc55602818bd6f4 -->
 
 # Initial Setup
-Create an instance of the Application Autoscaler service and bind it to your application. Install Autoscaler's plug-in for the “Cloud Foundry CLI” and attach a policy to your application.
+Create an instance of the Application Autoscaler service and bind it to your application. Install Autoscaler's plug-in for the “Cloud Foundry CLI”.
 
 
 
