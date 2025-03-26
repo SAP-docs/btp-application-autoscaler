@@ -2,7 +2,7 @@
 The Application Autoscaler offers a plugin for the Cloud Foundry Command Line Interface CLI. The plugin enables users to:
   * attach or detach scaling policies to apps
   * view attached scaling policies and view the scaling histories
-  * view the metrics sent by the app
+  * view the metrics sent by apps
 
 This is useful:
   * to get some insights into how current scaling policies work and if changes are reasonable.
