@@ -396,11 +396,7 @@ none
 </td>
 <td valign="top">
 
-The minimum duration between two successive scaling actions.
-
-After this scaling has been initiated, the next scaling action can only occur after this specified interval. During this interval, no other scaling action can be initiated.
-
-This interval ensures the application remains stable before initiating another scaling action. For production environments, it is recommended to set a longer interval.
+The minimum duration between two successive scaling triggers. After the first scaling trigger, the second trigger occurs after the specified interval. This duration enables the application to be stable enough before it starts the next trigger. For production environments, a longer duration is recommended.
 
 </td>
 <td valign="top">
