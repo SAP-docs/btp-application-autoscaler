@@ -264,12 +264,12 @@ minimum = 60 seconds; maximum = 3600 seconds
 </td>
 <td valign="top">
 
-300 seconds
+120 seconds
 
 </td>
 <td valign="top">
 
-`300 seconds` 
+`60` 
 
 </td>
 </tr>
