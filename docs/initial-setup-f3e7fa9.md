@@ -2,7 +2,7 @@
 
 # Initial Setup
 
-Create an instance of the Application Autoscaler service and bind it to your application.
+Create an instance of the Application Autoscaler service and bind it to your application. Install the Autoscaler plugin for the Cloud Foundry Command Line Interface \(cf CLI\).
 
 
 
@@ -58,4 +58,27 @@ Create an instance of the Application Autoscaler service and bind it to your app
 
     The *Bound apps* field displays all applications bound to the instance.
 
+
+
+
+<a name="loiof3e7fa907e9d4da89fc55602818bd6f4__postreq_iyd_mb3_q2c"/>
+
+## Next Steps
+
+
+
+### Install Autoscaler's plugin for the Cloud Foundry CLI
+
+The plugin can be easily installed directly via the command-line:
+
+```
+cf install-plugin -r CF-Community app-autoscaler-plugin
+```
+
+For more installation options, see [app-autoscaler-cli-plugin](https://github.com/SAP-docs/btp-application-autoscaler/blob/821747cfaa080ec36b1ae6d9baca89d6f6a18e2a/docs/initial-setup-f3e7fa9.md) on GitHub.
+
+**Related Information**  
+
+
+[Cloud Foundry Commands of Application Autoscaler](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/0faf8a26460a4fc99c5c72ce0113dd36.html "The Application Autoscaler plugin for the Cloud Foundry Command Line Interface (cf CLI) includes commands that you can use to get some insights into your scaling policies and for debugging.") :arrow_upper_right:
 

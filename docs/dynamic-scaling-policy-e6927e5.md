@@ -7,6 +7,13 @@ Scale your application instances based on memory or CPU usage, response time, th
 > ### Note:  
 > Both built-in and custom metrics are collected from each application instance individually. Then, their average for all application instances is determined. Based on these average metrics, scaling rules are evaluated once per app.
 
+To apply the scaling policies described here, you can use:
+
+-   the Cloud Foundry Command Line Interface \(CLI\)
+-   the dashboard.
+
+For more information, see [Cloud Foundry Commands of Application Autoscaler](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/0faf8a26460a4fc99c5c72ce0113dd36.html "The Application Autoscaler plugin for the Cloud Foundry Command Line Interface (cf CLI) includes commands that you can use to get some insights into your scaling policies and for debugging.") :arrow_upper_right: and [Working with the Application Autoscaler Dashboard](working-with-the-application-autoscaler-dashboard-3ff73fc.md#loio3ff73fce08b44e8d8de0c102d0f64a50).
+
 
 
 <a name="loioe6927e5af85e45f4a8a056c8662fa784__section_dtl_yfb_n4b"/>
@@ -224,4 +231,6 @@ For more information about the parameters used, see [Parameters for a Dynamic Sc
 
 
 [Parameters for a Dynamic Scaling Policy](parameters-for-a-dynamic-scaling-policy-c966417.md "Get to know the parameters used for dynamic scaling.")
+
+[Autoscaler Plugin for Cloud Foundry CLI](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/abb810d1119d4312ba1f4b91a5a9b31b.html "The Autoscaler service offers a CLI plugin for the Cloud Foundry Command Line Interface (CLI).") :arrow_upper_right:
 

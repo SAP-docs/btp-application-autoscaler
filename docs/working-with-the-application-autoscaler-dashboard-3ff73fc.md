@@ -18,7 +18,10 @@ Access the Application Autoscaler dashboard, which lets you create or update a s
 
 ## Prerequisites
 
-You have created an Application Autoscaler service instance and bound it to your application. See [Initial Setup](initial-setup-f3e7fa9.md).
+-   You have created an Application Autoscaler service instance and bound it to your application. See [Initial Setup](initial-setup-f3e7fa9.md).
+
+-   You are a Space Developer in the chosen Cloud Foundry space.
+
 
 
 

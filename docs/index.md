@@ -13,5 +13,7 @@
             -   [Parameters for a Schedule-Based Scaling Policy](parameters-for-a-schedule-based-scaling-policy-c8023eb.md)
             -   [Time Zones for a Schedule-Based Policy](time-zones-for-a-schedule-based-policy-92bceeb.md)
     -   [Defining a Custom Metric](defining-a-custom-metric-87e657e.md)
+-   [Administration](administration-34bfc16.md)
+    -   [Preventing the Application Autoscaler from Scaling your Application](preventing-the-application-autoscaler-from-scaling-your-application-f427fc2.md)
 -   [Accessibility Features in Application Autoscaler](accessibility-features-in-application-autoscaler-94b439d.md)
 

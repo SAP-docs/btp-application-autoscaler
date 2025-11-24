@@ -32,7 +32,7 @@ Application Autoscaler lets you automatically increase or decrease the number of
 <dl>
 <dt><b>
 
-Scale your applications automatically 
+Scale applications on CF automatically 
 
 </b></dt>
 <dd>
