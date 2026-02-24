@@ -4,8 +4,12 @@
 
 Scale your application instances based on memory or CPU usage, response time, throughput, or custom metrics.
 
-> ### Note:  
+> ### Note:
 > Both built-in and custom metrics are collected from each application instance individually. Then, their average for all application instances is determined. Based on these average metrics, scaling rules are evaluated once per app.
+>
+> Application Autoscaler checks the current scaling policy for an app every 40 seconds. When a rule matches, the specified scaling adjustment is executed and clamped to the boundaries defined by `instance_min_count` and `instance_max_count`. Rules are evaluated from top to bottom, and once the first matching rule is found, evaluation stops.
+>
+> **Important:** `instance_min_count` and `instance_max_count` are only enforced when scaling is executed by a rule. They do not automatically change the number of running instances. For example, if your app is running with 2 instances, and you set a policy with `instance_min_count: 3`, the app will continue to run with 2 instances until a scaling rule is matched (even a scaled-down rule).
 
 To apply the scaling policies described here, you can use:
 
