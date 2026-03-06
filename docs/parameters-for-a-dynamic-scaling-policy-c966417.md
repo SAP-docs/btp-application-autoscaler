@@ -53,7 +53,14 @@ Example
 </td>
 <td valign="top">
 
-The minimum number of application instances that are always running.
+The minimum number of application instances that the Autoscaler will scale down to.
+
+> ### Note:  
+> This value does **not** automatically set the number of running instances. It only acts as a lower boundary when scaling is executed by a scaling rule.
+> 
+> If no scaling rules match, the application continues to run with its current number of instances, even if that number is lower than `instance_min_count`.
+
+
 
 </td>
 <td valign="top">
@@ -90,7 +97,14 @@ none
 </td>
 <td valign="top">
 
-The maximum number of application instances that can be provisioned as part of application scaling.
+The maximum number of application instances that the Autoscaler will scale up to.
+
+> ### Note:  
+> This value does **not** automatically set the number of running instances. It only acts as an upper boundary when scaling is executed by a scaling rule.
+> 
+> If no scaling rules match, the application continues to run with its current number of instances, even if that number is higher than `instance_max_count`.
+
+
 
 </td>
 <td valign="top">
