@@ -48,7 +48,7 @@ Example
 <tr>
 <td valign="top">
 
-`instance_min_count` 
+`instance_min_count`
 
 </td>
 <td valign="top">
@@ -92,7 +92,7 @@ none
 <tr>
 <td valign="top">
 
-`instance_max_count` 
+`instance_max_count`
 
 </td>
 <td valign="top">
