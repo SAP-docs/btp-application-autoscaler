@@ -65,7 +65,7 @@ The scaling app should set `metric_submission_strategy.allow-from` to `bound_app
 > ### Note:  
 > The metric type used for custom metrics must not be any of the standard metric types.
 
-> ### Tip:
+> ### Tip:  
 > We recommend submitting custom metrics every 40 seconds from every application instance.
 
 As part of the binding process, the Application Autoscaler service instance provides necessary credentials to emit custom metrics.
