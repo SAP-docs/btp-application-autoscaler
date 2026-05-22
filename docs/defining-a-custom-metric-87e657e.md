@@ -52,9 +52,6 @@ The following example shows a policy with a custom metric:
 
 The following scenario involves two different applications that are bound to the same Autoscaler service, for example, the metric producer app and an app that should be scaled. Here, the metric producer app sends custom metrics on behalf of the app to be scaled.
 
-> ### Caution:  
-> This scenario is not supported with the deprecated “Basic Authentication”.
-
 ![This scenario involves two different applications that are bound to the same Autoscaler service, for example, the metric producer app and an app that should be scaled. The metric producer app sends custom metrics on behalf of the app to be scaled.](images/CustomMetrics2apps_3952152.png)
 
 > ### Remember:  
@@ -69,10 +66,6 @@ The scaling app should set `metric_submission_strategy.allow-from` to `bound_app
 > We recommend submitting custom metrics every 40 seconds from every application instance.
 
 As part of the binding process, the Application Autoscaler service instance provides necessary credentials to emit custom metrics.
-
-The generation of these credentials is based on the credential type parameter in the service binding. The supported credential types are binding-secret and x509. If no credential type is provided, x509 is used as the default credential type.
-
-
 
 <a name="loio87e657e691ac48ba85fd777c042afbd8__steps_opm_ny3_ddc"/>
 
@@ -162,10 +155,6 @@ The generation of these credentials is based on the credential type parameter in
 
     > ### Note:  
     > The X.509 certificate and private key pair are valid for 24 hours. At least 20 minutes before expiration, they're regenerated and new files replace the existing files. Make sure that your code reloads the X.509 certificate and private key pair if they're expired. See [Using Instance Identity Credentials](https://docs.cloudfoundry.org/devguide/deploy-apps/instance-identity.html) in the Cloud Foundry Documentation.
-
-    **Authenticate with Basic Authentication \(Deprecated, don't use\):**
-
-    `url`, `username`, and `password` in the application environment are provided for backwards compatibility with the HTTP basic authentication scheme and shouldn't be used going forward. If your application still needs to authenticate with basic authentication, use credential-type binding-secret in the service binding and plan to migrate to mTLS \(\`x509\`\) authentication until April 30, 2025.
 
 4.  Push custom metrics at an interval of your choice using APIs. For the REST API specification, see [Application Autoscaler custom metrics API](https://api.sap.com/api/ApplicationAutoscalerCustomMetricsAPI/resource).
 
