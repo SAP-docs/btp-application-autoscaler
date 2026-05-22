@@ -67,6 +67,8 @@ The scaling app should set `metric_submission_strategy.allow-from` to `bound_app
 
 As part of the binding process, the Application Autoscaler service instance provides necessary credentials to emit custom metrics.
 
+
+
 <a name="loio87e657e691ac48ba85fd777c042afbd8__steps_opm_ny3_ddc"/>
 
 ## Procedure
